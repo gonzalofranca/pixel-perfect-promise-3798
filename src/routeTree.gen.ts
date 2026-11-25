@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgendaRouteImport } from './routes/agenda'
+import { Route as CajaRouteImport } from './routes/caja'
+import { Route as ClientesRouteImport } from './routes/clientes'
+import { Route as ComprasRouteImport } from './routes/compras'
+import { Route as ConfiguracionRouteImport } from './routes/configuracion'
+import { Route as FinanzasRouteImport } from './routes/finanzas'
+import { Route as InventarioRouteImport } from './routes/inventario'
+import { Route as MasRouteImport } from './routes/mas'
+import { Route as ProduccionRouteImport } from './routes/produccion'
+import { Route as ProductosRouteImport } from './routes/productos'
+import { Route as ProveedoresRouteImport } from './routes/proveedores'
+import { Route as ReportesRouteImport } from './routes/reportes'
+import { Route as VentasRouteImport } from './routes/ventas'
+import { Route as BibliotecaIndexRouteImport } from './routes/biblioteca/index'
+import { Route as BibliotecaIdRouteImport } from './routes/biblioteca/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AgendaRoute = AgendaRouteImport.update({
+  id: '/agenda',
+  path: '/agenda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CajaRoute = CajaRouteImport.update({
+  id: '/caja',
+  path: '/caja',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientesRoute = ClientesRouteImport.update({
+  id: '/clientes',
+  path: '/clientes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComprasRoute = ComprasRouteImport.update({
+  id: '/compras',
+  path: '/compras',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracionRoute = ConfiguracionRouteImport.update({
+  id: '/configuracion',
+  path: '/configuracion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanzasRoute = FinanzasRouteImport.update({
+  id: '/finanzas',
+  path: '/finanzas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InventarioRoute = InventarioRouteImport.update({
+  id: '/inventario',
+  path: '/inventario',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MasRoute = MasRouteImport.update({
+  id: '/mas',
+  path: '/mas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProduccionRoute = ProduccionRouteImport.update({
+  id: '/produccion',
+  path: '/produccion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductosRoute = ProductosRouteImport.update({
+  id: '/productos',
+  path: '/productos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProveedoresRoute = ProveedoresRouteImport.update({
+  id: '/proveedores',
+  path: '/proveedores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportesRoute = ReportesRouteImport.update({
+  id: '/reportes',
+  path: '/reportes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VentasRoute = VentasRouteImport.update({
+  id: '/ventas',
+  path: '/ventas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliotecaIndexRoute = BibliotecaIndexRouteImport.update({
+  id: '/biblioteca/',
+  path: '/biblioteca/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliotecaIdRoute = BibliotecaIdRouteImport.update({
+  id: '/biblioteca/$id',
+  path: '/biblioteca/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agenda': typeof AgendaRoute
+  '/caja': typeof CajaRoute
+  '/clientes': typeof ClientesRoute
+  '/compras': typeof ComprasRoute
+  '/configuracion': typeof ConfiguracionRoute
+  '/finanzas': typeof FinanzasRoute
+  '/inventario': typeof InventarioRoute
+  '/mas': typeof MasRoute
+  '/produccion': typeof ProduccionRoute
+  '/productos': typeof ProductosRoute
+  '/proveedores': typeof ProveedoresRoute
+  '/reportes': typeof ReportesRoute
+  '/ventas': typeof VentasRoute
+  '/biblioteca/$id': typeof BibliotecaIdRoute
+  '/biblioteca/': typeof BibliotecaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agenda': typeof AgendaRoute
+  '/caja': typeof CajaRoute
+  '/clientes': typeof ClientesRoute
+  '/compras': typeof ComprasRoute
+  '/configuracion': typeof ConfiguracionRoute
+  '/finanzas': typeof FinanzasRoute
+  '/inventario': typeof InventarioRoute
+  '/mas': typeof MasRoute
+  '/produccion': typeof ProduccionRoute
+  '/productos': typeof ProductosRoute
+  '/proveedores': typeof ProveedoresRoute
+  '/reportes': typeof ReportesRoute
+  '/ventas': typeof VentasRoute
+  '/biblioteca/$id': typeof BibliotecaIdRoute
+  '/biblioteca': typeof BibliotecaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agenda': typeof AgendaRoute
+  '/caja': typeof CajaRoute
+  '/clientes': typeof ClientesRoute
+  '/compras': typeof ComprasRoute
+  '/configuracion': typeof ConfiguracionRoute
+  '/finanzas': typeof FinanzasRoute
+  '/inventario': typeof InventarioRoute
+  '/mas': typeof MasRoute
+  '/produccion': typeof ProduccionRoute
+  '/productos': typeof ProductosRoute
+  '/proveedores': typeof ProveedoresRoute
+  '/reportes': typeof ReportesRoute
+  '/ventas': typeof VentasRoute
+  '/biblioteca/$id': typeof BibliotecaIdRoute
+  '/biblioteca/': typeof BibliotecaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agenda'
+    | '/caja'
+    | '/clientes'
+    | '/compras'
+    | '/configuracion'
+    | '/finanzas'
+    | '/inventario'
+    | '/mas'
+    | '/produccion'
+    | '/productos'
+    | '/proveedores'
+    | '/reportes'
+    | '/ventas'
+    | '/biblioteca/$id'
+    | '/biblioteca/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agenda'
+    | '/caja'
+    | '/clientes'
+    | '/compras'
+    | '/configuracion'
+    | '/finanzas'
+    | '/inventario'
+    | '/mas'
+    | '/produccion'
+    | '/productos'
+    | '/proveedores'
+    | '/reportes'
+    | '/ventas'
+    | '/biblioteca/$id'
+    | '/biblioteca'
+  id:
+    | '__root__'
+    | '/'
+    | '/agenda'
+    | '/caja'
+    | '/clientes'
+    | '/compras'
+    | '/configuracion'
+    | '/finanzas'
+    | '/inventario'
+    | '/mas'
+    | '/produccion'
+    | '/productos'
+    | '/proveedores'
+    | '/reportes'
+    | '/ventas'
+    | '/biblioteca/$id'
+    | '/biblioteca/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgendaRoute: typeof AgendaRoute
+  CajaRoute: typeof CajaRoute
+  ClientesRoute: typeof ClientesRoute
+  ComprasRoute: typeof ComprasRoute
+  ConfiguracionRoute: typeof ConfiguracionRoute
+  FinanzasRoute: typeof FinanzasRoute
+  InventarioRoute: typeof InventarioRoute
+  MasRoute: typeof MasRoute
+  ProduccionRoute: typeof ProduccionRoute
+  ProductosRoute: typeof ProductosRoute
+  ProveedoresRoute: typeof ProveedoresRoute
+  ReportesRoute: typeof ReportesRoute
+  VentasRoute: typeof VentasRoute
+  BibliotecaIdRoute: typeof BibliotecaIdRoute
+  BibliotecaIndexRoute: typeof BibliotecaIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +247,131 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/agenda': {
+      id: '/agenda'
+      path: '/agenda'
+      fullPath: '/agenda'
+      preLoaderRoute: typeof AgendaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/caja': {
+      id: '/caja'
+      path: '/caja'
+      fullPath: '/caja'
+      preLoaderRoute: typeof CajaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clientes': {
+      id: '/clientes'
+      path: '/clientes'
+      fullPath: '/clientes'
+      preLoaderRoute: typeof ClientesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compras': {
+      id: '/compras'
+      path: '/compras'
+      fullPath: '/compras'
+      preLoaderRoute: typeof ComprasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracion': {
+      id: '/configuracion'
+      path: '/configuracion'
+      fullPath: '/configuracion'
+      preLoaderRoute: typeof ConfiguracionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finanzas': {
+      id: '/finanzas'
+      path: '/finanzas'
+      fullPath: '/finanzas'
+      preLoaderRoute: typeof FinanzasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inventario': {
+      id: '/inventario'
+      path: '/inventario'
+      fullPath: '/inventario'
+      preLoaderRoute: typeof InventarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mas': {
+      id: '/mas'
+      path: '/mas'
+      fullPath: '/mas'
+      preLoaderRoute: typeof MasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produccion': {
+      id: '/produccion'
+      path: '/produccion'
+      fullPath: '/produccion'
+      preLoaderRoute: typeof ProduccionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/productos': {
+      id: '/productos'
+      path: '/productos'
+      fullPath: '/productos'
+      preLoaderRoute: typeof ProductosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proveedores': {
+      id: '/proveedores'
+      path: '/proveedores'
+      fullPath: '/proveedores'
+      preLoaderRoute: typeof ProveedoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reportes': {
+      id: '/reportes'
+      path: '/reportes'
+      fullPath: '/reportes'
+      preLoaderRoute: typeof ReportesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ventas': {
+      id: '/ventas'
+      path: '/ventas'
+      fullPath: '/ventas'
+      preLoaderRoute: typeof VentasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca/': {
+      id: '/biblioteca/'
+      path: '/biblioteca'
+      fullPath: '/biblioteca/'
+      preLoaderRoute: typeof BibliotecaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca/$id': {
+      id: '/biblioteca/$id'
+      path: '/biblioteca/$id'
+      fullPath: '/biblioteca/$id'
+      preLoaderRoute: typeof BibliotecaIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgendaRoute: AgendaRoute,
+  CajaRoute: CajaRoute,
+  ClientesRoute: ClientesRoute,
+  ComprasRoute: ComprasRoute,
+  ConfiguracionRoute: ConfiguracionRoute,
+  FinanzasRoute: FinanzasRoute,
+  InventarioRoute: InventarioRoute,
+  MasRoute: MasRoute,
+  ProduccionRoute: ProduccionRoute,
+  ProductosRoute: ProductosRoute,
+  ProveedoresRoute: ProveedoresRoute,
+  ReportesRoute: ReportesRoute,
+  VentasRoute: VentasRoute,
+  BibliotecaIdRoute: BibliotecaIdRoute,
+  BibliotecaIndexRoute: BibliotecaIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
